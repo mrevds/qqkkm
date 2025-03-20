@@ -1,0 +1,100 @@
+/* Statistics.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #ff4081;
+  --background-light: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  background: var(--background-light);
+  text-align: center;
+}
+
+.statistics-container {
+  width: 90%;
+  max-width: 1200px;
+  background: var(--background-light);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  overflow: hidden;
+}
+
+.statistics-header {
+  margin-bottom: 30px;
+}
+
+.statistics-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.statistics-description {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+  margin: 10px auto 0;
+  line-height: 1.5;
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stat-card {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-text {
+  font-size: 16px;
+  color: #444;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .stat-card {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

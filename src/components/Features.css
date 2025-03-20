@@ -1,0 +1,109 @@
+.features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background: #ffffff;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 800px;
+  background: linear-gradient(135deg, #4caf50, #1b5e20);
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: rgb(255, 255, 255);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card:nth-child(2) {
+  background: linear-gradient(135deg, #42a5f5, #0d47a1);
+}
+
+.feature-card:nth-child(3) {
+  background: linear-gradient(135deg, #757575, #212121);
+}
+
+.feature-card:nth-child(4) {
+  background: linear-gradient(135deg, #9c27b0, #4a148c);
+}
+
+.feature-card:nth-child(5) {
+  background: linear-gradient(135deg, #ff7043, #bf360c);
+}
+
+.feature-card:nth-child(6) {
+  background: linear-gradient(135deg, #ffb74d, #ff6f00);
+}
+
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.feature-text {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.feature-step {
+  position: absolute;
+  right: -30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.feature-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+      width: 85%;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .feature-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .feature-step {
+      right: 0;
+      top: -10px;
+      font-size: 1.5rem;
+  }
+}

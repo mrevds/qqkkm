@@ -1,0 +1,92 @@
+.contacts-page {
+  font-family: 'Arial', sans-serif;
+  padding: 4rem 0 0;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.contacts-container {
+  max-width: 800px;
+  width: 90%;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contacts-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #3498db;
+}
+
+.contact-text strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #333;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+@media (max-width: 1024px) {
+  .contacts-container {
+    padding: 2rem;
+  }
+
+  .contacts-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-page {
+    padding: 2rem 0;
+  }
+
+  .contacts-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .contacts-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-text p {
+    font-size: 0.95rem;
+  }
+}
+
