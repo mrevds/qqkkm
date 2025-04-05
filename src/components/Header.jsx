@@ -13,7 +13,6 @@ const Header = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsActive(true);
-            setIsMobileMenuOpen(false);
         }, 100);
     }, []);
 
@@ -27,18 +26,29 @@ const Header = () => {
         setIsDropdownOpen(false);
     };
 
-
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+        document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden';
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+        document.body.style.overflow = 'auto';
     };
 
     return (
         <header className={`header container ${isActive ? 'active' : ''}`}>
+            <div className="burger-menu" onClick={toggleMobileMenu}>
+                <div className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+                <div className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+                <div className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+            </div>
+
             <div className="logo">
                 <img src={LOGO} alt="logo" />
             </div>
 
-            <div className="language-switcher">
+            <div className="language-switcher desktop-lang">
                 <button className="lang-btn" onClick={toggleDropdown}>
                     {t('language')}
                 </button>
@@ -51,19 +61,22 @@ const Header = () => {
                 )}
             </div>
 
-            <div className="burger-menu" onClick={toggleMobileMenu}>
-                <div className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
-                <div className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
-                <div className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
-            </div>
+            {/* Оверлей */}
+            <div 
+                className={`menu-overlay ${isMobileMenuOpen ? 'visible' : ''}`} 
+                onClick={closeMobileMenu}
+            />
 
+            {/* Мобильное меню */}
             <div className={`menu-container ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
                 <div className="film"></div>
                 <ul className="menu">
-                    <li><Link to="/">{t('home')}</Link></li>
-                    <li><Link to="/contacts">{t('contacts')}</Link></li>
-                    <li><Link to="/help">{t('help')}</Link></li>
+                    <li><Link to="/" onClick={closeMobileMenu}>{t('home')}</Link></li>
+                    <li><Link to="/contacts" onClick={closeMobileMenu}>{t('contacts')}</Link></li>
+                    <li><Link to="/help" onClick={closeMobileMenu}>{t('help')}</Link></li>
                 </ul>
+
+               
             </div>
         </header>
     );

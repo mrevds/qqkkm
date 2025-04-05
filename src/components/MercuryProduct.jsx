@@ -178,10 +178,7 @@ const MercuryProduct = () => {
               <TableCell sx={{ fontWeight: "bold", color: "#333", fontSize: isMobile ? "0.8rem" : "0.875rem" }}>Дисплей</TableCell>
               <TableCell sx={{ color: "#666", fontSize: isMobile ? "0.8rem" : "0.875rem" }}>10-разрядный ЖК-индикатор</TableCell>
             </TableRow>
-            <TableRow sx={{ "&:nth-of-type(even)": { backgroundColor: "#fff" } }}>
-              <TableCell sx={{ fontWeight: "bold", color: "#333", fontSize: isMobile ? "0.8rem" : "0.875rem" }}>Память</TableCell>
-              <TableCell sx={{ color: "#666", fontSize: isMobile ? "0.8rem" : "0.875rem" }}>Фискальная, хранение до 5 лет</TableCell>
-            </TableRow>
+           
             <TableRow sx={{ "&:nth-of-type(odd)": { backgroundColor: "#f9f9f9" } }}>
               <TableCell sx={{ fontWeight: "bold", color: "#333", fontSize: isMobile ? "0.8rem" : "0.875rem" }}>Размеры</TableCell>
               <TableCell sx={{ color: "#666", fontSize: isMobile ? "0.8rem" : "0.875rem" }}>200×200×80 мм</TableCell>
